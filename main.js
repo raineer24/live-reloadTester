@@ -3,16 +3,16 @@ window.onload = function () {
 
   http.onreadystatechange = function () {
     if(http.readyState == 4 && http.status == 200){
-        //console.log(http.response); object
-       // console.log(JSON.parse(http.response)); json
+        console.log(http.response); object
+      //  console.log(JSON.parse(http.response)); json
     }
   };
   http.open("GET", "data/grocer.json", true);
   http.send();
 
-  $.get("data/grocer.json", function (data) {
-    console.log(data);
-  });
+  // $.get("data/grocer.json", function(data) {
+  //   console.log(data);
+  // });
   console.log("test");
 
 
@@ -74,11 +74,11 @@ console.log(canDrink);
 
 // const retailCompanies = companies.filter(company => company.category === 'Retail');
 
-const eightiesCompanies = companies.filter(company => (company.start >= 1986 && company.start < 1990));
+// const eightiesCompanies = companies.filter(company => (company.start >= 1986 && company.start < 1990));
 
 
 
-const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+// const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
 
 // const companyNames = companies.map(function (company) {
 //     return company.name; 
